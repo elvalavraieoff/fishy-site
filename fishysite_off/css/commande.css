@@ -1,0 +1,231 @@
+/* =============================================
+   commande.css — Commands page styles
+   ============================================= */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  padding: 10rem 2rem 3rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  background: linear-gradient(135deg, #e8f4ff 0%, #7ec8f0 50%, #3a9bdc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.page-hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ---- Wrapper ---- */
+.commands-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+/* ---- Filter Tabs ---- */
+.cmd-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.cmd-tab {
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(58, 155, 220, 0.2);
+  background: rgba(13, 42, 92, 0.3);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cmd-tab:hover {
+  border-color: rgba(58, 155, 220, 0.4);
+  color: var(--text-primary);
+  background: rgba(13, 42, 92, 0.5);
+}
+
+.cmd-tab.active {
+  background: rgba(30, 111, 212, 0.2);
+  border-color: rgba(58, 155, 220, 0.45);
+  color: var(--blue-5);
+}
+
+/* ---- Command Section ---- */
+.cmd-section {
+  margin-bottom: 2.5rem;
+  background: rgba(13, 42, 92, 0.2);
+  border: 1px solid rgba(58, 155, 220, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.cmd-section.hidden {
+  display: none;
+}
+
+.cmd-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.6rem 1.75rem;
+  border-bottom: 1px solid rgba(58, 155, 220, 0.1);
+  background: rgba(13, 42, 92, 0.3);
+}
+
+.cmd-section-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(17, 72, 160, 0.4), rgba(30, 111, 212, 0.2));
+  border: 1px solid rgba(58, 155, 220, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmd-section-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue-5);
+}
+
+.cmd-section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.01em;
+}
+
+.cmd-section-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ---- Command List ---- */
+.cmd-list {
+  padding: 0.5rem 0;
+}
+
+.cmd-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid rgba(58, 155, 220, 0.06);
+  transition: background 0.2s;
+}
+
+.cmd-item:last-child {
+  border-bottom: none;
+}
+
+.cmd-item:hover {
+  background: rgba(30, 111, 212, 0.06);
+}
+
+.cmd-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  min-width: 130px;
+  background: rgba(13, 42, 92, 0.5);
+  border: 1px solid rgba(58, 155, 220, 0.2);
+  border-radius: 7px;
+  padding: 0.3rem 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.cmd-slash {
+  color: var(--blue-4);
+  font-weight: 700;
+}
+
+.cmd-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex: 1;
+}
+
+/* ---- Badges ---- */
+.cmd-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-peche {
+  background: rgba(30, 111, 212, 0.15);
+  color: #7ec8f0;
+  border: 1px solid rgba(30, 111, 212, 0.3);
+}
+
+.badge-social {
+  background: rgba(58, 155, 220, 0.12);
+  color: #b8e4fa;
+  border: 1px solid rgba(58, 155, 220, 0.25);
+}
+
+.badge-economie {
+  background: rgba(126, 200, 240, 0.1);
+  color: #7ec8f0;
+  border: 1px solid rgba(126, 200, 240, 0.2);
+}
+
+/* ---- Nav active state ---- */
+.nav-active {
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .cmd-item {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .cmd-name {
+    min-width: unset;
+  }
+
+  .cmd-section-header {
+    padding: 1.25rem;
+  }
+
+  .commands-wrapper {
+    padding: 0 1.25rem 4rem;
+  }
+}

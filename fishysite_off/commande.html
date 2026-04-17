@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fishy — Commandes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/commande.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="https://images-ext-1.discordapp.net/external/UDsJ71y6RsFQPj1F53ec9-yy4SK5QGPjzCnW01T4tXg/%3Fsize%3D128/https/cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp?format=webp" alt="Fishy Logo">
+    <span>Fishy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="commande.html" class="nav-active">Commandes</a></li>
+    <li><a href="https://top.gg/bot/1486096529247965204/vote">Voter</a></li>
+     <li><a href="equipe.html">Equipe</a></li>  
+    <li><a href="features.html">Fonctionnalité</a></li>
+    <li><a href="https://discord.com/oauth2/authorize?client_id=1486096529247965204&permissions=8&integration_type=0&scope=applications.commands+bot" class="nav-cta">Ajouter le bot</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="section-tag fade-in">Référence</span>
+  <h1 class="page-hero-title fade-in fade-in-delay-1">Toutes les commandes</h1>
+  <p class="page-hero-desc fade-in fade-in-delay-2">
+    Découvrez l'ensemble des commandes disponibles sur Fishy. Pêche, social, économie — tout ce qu'il vous faut pour progresser.
+  </p>
+</div>
+
+<!-- COMMANDS CONTENT -->
+<main class="commands-wrapper">
+
+  <!-- FILTER TABS -->
+  <div class="cmd-tabs fade-in">
+    <button class="cmd-tab active" data-filter="all">Toutes</button>
+    <button class="cmd-tab" data-filter="peche">Pêche</button>
+    <button class="cmd-tab" data-filter="social">Social</button>
+    <button class="cmd-tab" data-filter="economie">Économie</button>
+  </div>
+
+  <!-- SECTIONS -->
+
+  <!-- PÊCHE -->
+  <div class="cmd-section fade-in" data-category="peche">
+    <div class="cmd-section-header">
+      <div class="cmd-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 5H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2z"/>
+          <path d="M12 12c0-2.5 2-4 4-3"/>
+          <circle cx="9" cy="12" r="1" fill="currentColor"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="cmd-section-title">Commandes de Pêche</h2>
+        <p class="cmd-section-subtitle">Lance ta ligne et remplis ton inventaire de poissons rares.</p>
+      </div>
+    </div>
+    <div class="cmd-list">
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>fish</div>
+        <div class="cmd-desc">Pêche et obtiens des poissons aléatoires selon ta chance et ta progression.</div>
+        <span class="cmd-badge badge-peche">Pêche</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>catch</div>
+        <div class="cmd-desc">Capture des poissons spéciaux quotidiennement.</div>
+        <span class="cmd-badge badge-peche">Pêche</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>collection</div>
+        <div class="cmd-desc">Consulte ta collection de poissons, leur rareté et leur valeur totale.</div>
+        <span class="cmd-badge badge-peche">Pêche</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="cmd-section fade-in fade-in-delay-1" data-category="social">
+    <div class="cmd-section-header">
+      <div class="cmd-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="cmd-section-title">Commandes Sociales</h2>
+        <p class="cmd-section-subtitle">Interagis avec les autres joueurs, vole, donne et échange.</p>
+      </div>
+    </div>
+    <div class="cmd-list">
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>steal</div>
+        <div class="cmd-desc">Tente de voler un poisson ou des coins à un autre joueur. Haut risque, haute récompense.</div>
+        <span class="cmd-badge badge-social">Social</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>gift</div>
+        <div class="cmd-desc">Offre un poisson ou des coins à un autre joueur de ton choix.</div>
+        <span class="cmd-badge badge-social">Social</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>echange</div>
+        <div class="cmd-desc">Propose un échange d'objets à un autre joueur. Les deux parties doivent accepter.</div>
+        <span class="cmd-badge badge-social">Social</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>classement</div>
+        <div class="cmd-desc">Affiche le classement mondial en temps réel. Vois où tu te situes parmi tous les joueurs.</div>
+        <span class="cmd-badge badge-social">Social</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉCONOMIE -->
+  <div class="cmd-section fade-in fade-in-delay-2" data-category="economie">
+    <div class="cmd-section-header">
+      <div class="cmd-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="cmd-section-title">Commandes Économie</h2>
+        <p class="cmd-section-subtitle">Gère tes coins, réclame tes récompenses quotidiennes.</p>
+      </div>
+    </div>
+    <div class="cmd-list">
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>pension</div>
+        <div class="cmd-desc">Réclame tes coins quotidiens. Reviens chaque jour pour maximiser tes gains.</div>
+        <span class="cmd-badge badge-economie">Économie</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">
+    <img src="https://images-ext-1.discordapp.net/external/UDsJ71y6RsFQPj1F53ec9-yy4SK5QGPjzCnW01T4tXg/%3Fsize%3D128/https/cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp?format=webp" alt="Fishy">
+    <span>Fishy</span>
+  </a>
+  <div class="footer-divider"></div>
+  <p>Bot Discord 100% français</p>
+  <div class="footer-divider"></div>
+  <p>Fait avec soin par l'équipe Fishy</p>
+</footer>
+
+<script src="js/animations.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/commande.js"></script>
+</body>
+</html>

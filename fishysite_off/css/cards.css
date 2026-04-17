@@ -1,0 +1,131 @@
+/* =============================================
+   cards.css — Feature cards & pillar cards
+   ============================================= */
+
+/* ---- Pillar cards (About section) ---- */
+.pillar {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  transition: all 0.25s;
+}
+
+.pillar:hover {
+  background: var(--card-hover);
+  border-color: rgba(58, 155, 220, 0.3);
+  transform: translateY(-2px);
+}
+
+.pillar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(30, 111, 212, 0.18);
+  border: 1px solid rgba(58, 155, 220, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.pillar-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--blue-4);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pillar h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.pillar p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ---- Feature cards ---- */
+.feature-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(126, 200, 240, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feature-card:hover {
+  background: var(--card-hover);
+  border-color: rgba(58, 155, 220, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(17, 72, 160, 0.2);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* Highlighted feature card variant */
+.feature-card--highlight {
+  background: linear-gradient(135deg, rgba(13, 42, 92, 0.5), rgba(30, 111, 212, 0.15));
+  border-color: rgba(58, 155, 220, 0.25);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(17, 72, 160, 0.4), rgba(30, 111, 212, 0.2));
+  border: 1px solid rgba(58, 155, 220, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+
+.feature-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue-5);
+}
+
+/* Highlighted icon variant */
+.feature-icon--highlight {
+  background: linear-gradient(135deg, rgba(30, 111, 212, 0.5), rgba(58, 155, 220, 0.3));
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.55rem;
+  letter-spacing: -0.01em;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}

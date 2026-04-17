@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fishy Fr — Français</title>
+<link rel="icon" href="https://cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/stats.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/commande.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="https://images-ext-1.discordapp.net/external/UDsJ71y6RsFQPj1F53ec9-yy4SK5QGPjzCnW01T4tXg/%3Fsize%3D128/https/cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp?format=webp" alt="Fishy Logo">
+    <span>Fishy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="features.html">Fonctionnalités</a></li>
+    <li><a href="team.html">Équipe</a></li>
+    <li><a href="https://top.gg/bot/1486096529247965204/vote">Voter</a></li>
+    <li><a href="commande.html">Commandes</a></li>
+    <li><a href="https://discord.com/oauth2/authorize?client_id=1486096529247965204&permissions=8&integration_type=0&scope=applications.commands+bot" class="nav-cta">Ajouter le bot</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <img
+      class="hero-logo fade-in"
+      src="https://images-ext-1.discordapp.net/external/UDsJ71y6RsFQPj1F53ec9-yy4SK5QGPjzCnW01T4tXg/%3Fsize%3D128/https/cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp?format=webp"
+      alt="Fishy"
+    >
+    <h1 class="fade-in fade-in-delay-1">Fishy</h1>
+    <p class="hero-subtitle fade-in fade-in-delay-2">Un bot Discord immersif où chaque action compte</p>
+    <p class="hero-desc fade-in fade-in-delay-3">
+      Fishy est un bot 100% français qui te permet de pêcher, voler, échanger et grimper dans un classement mondial compétitif, tout en restant simple et rapide à utiliser.
+    </p>
+    <div class="hero-buttons fade-in fade-in-delay-3">
+      <a href="https://discord.com/oauth2/authorize?client_id=1486096529247965204&permissions=8&integration_type=0&scope=applications.commands+bot" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Ajouter le bot
+      </a>
+      <a href="https://discord.gg/24aq2NcEYQ" class="btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Support
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Découvrir</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+
+    <div class="stat-card fade-in">
+      <div class="stat-live"><div class="stat-live-dot"></div>Live</div>
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <span class="stat-value loading" id="stat-servers">...</span>
+        <span class="stat-label">Serveurs</span>
+      </div>
+    </div>
+
+    <div class="stat-card fade-in fade-in-delay-1">
+      <div class="stat-live"><div class="stat-live-dot"></div>Live</div>
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <span class="stat-value loading" id="stat-users">...</span>
+        <span class="stat-label">Utilisateurs</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">
+    <img src="https://images-ext-1.discordapp.net/external/UDsJ71y6RsFQPj1F53ec9-yy4SK5QGPjzCnW01T4tXg/%3Fsize%3D128/https/cdn.discordapp.com/icons/1484938313650671717/781062c83422a091a4f66b44c94dc41a.webp?format=webp" alt="Fishy">
+    <span>Fishy</span>
+  </a>
+  <div class="footer-divider"></div>
+  <p>Bot Discord 100% français</p>
+  <div class="footer-divider"></div>
+  <p>Fait avec soin par l'équipe Fishy</p>
+</footer>
+
+<script src="js/animations.js"></script>
+<script src="js/nav.js"></script>
+<script>
+function formatNumber(n) {
+  return n.toLocaleString('fr-FR');
+}
+
+function animateCount(el, target) {
+  const duration = 1200;
+  const start = performance.now();
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = formatNumber(Math.round(target * ease));
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function setStatValue(id, value) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('loading', 'error');
+  animateCount(el, value);
+}
+
+function setStatError(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('loading');
+  el.classList.add('error');
+  el.textContent = '—';
+}
+
+async function loadStats() {
+  try {
+    const res = await fetch('/.netlify/functions/stats');
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+
+    data.servers != null ? setStatValue('stat-servers', data.servers) : setStatError('stat-servers');
+    data.users   != null ? setStatValue('stat-users',   data.users)   : setStatError('stat-users');
+  } catch {
+    setStatError('stat-servers');
+    setStatError('stat-users');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadStats);
+</script>
+</body>
+</html>

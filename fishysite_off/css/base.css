@@ -1,0 +1,148 @@
+/* =============================================
+   base.css — Variables, reset, global styles
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:          #050e1f;
+  --deep:          #071428;
+  --mid:           #0a1e40;
+  --blue-1:        #0d2a5c;
+  --blue-2:        #1148a0;
+  --blue-3:        #1e6fd4;
+  --blue-4:        #3a9bdc;
+  --blue-5:        #7ec8f0;
+  --blue-6:        #b8e4fa;
+
+  --text-primary:  #e8f4ff;
+  --text-secondary:#8ab5d8;
+  --text-muted:    #4e7a9e;
+
+  --card-bg:       rgba(13, 42, 92, 0.35);
+  --card-border:   rgba(58, 155, 220, 0.18);
+  --card-hover:    rgba(13, 42, 92, 0.6);
+
+  --radius:        16px;
+  --radius-sm:     10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--navy);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background ambient gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(17, 72, 160, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(30, 111, 212, 0.15) 0%, transparent 60%),
+    linear-gradient(180deg, #050e1f 0%, #071428 40%, #06101e 100%);
+  z-index: -1;
+}
+
+/* Section base */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 7rem 2rem;
+}
+
+/* Divider */
+.section-divider {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(58, 155, 220, 0.15), transparent);
+}
+
+/* Section tags */
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-4);
+  background: rgba(30, 111, 212, 0.12);
+  border: 1px solid rgba(58, 155, 220, 0.2);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  line-height: 1.75;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.8rem;
+  background: linear-gradient(135deg, #1148a0, #1e6fd4);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(126, 200, 240, 0.2);
+  transition: all 0.25s;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e6fd4, #3a9bdc);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 111, 212, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.8rem;
+  background: rgba(13, 42, 92, 0.4);
+  color: var(--blue-5);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(58, 155, 220, 0.3);
+  transition: all 0.25s;
+  letter-spacing: 0.01em;
+}
+
+.btn-secondary:hover {
+  background: rgba(13, 42, 92, 0.65);
+  border-color: rgba(126, 200, 240, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}

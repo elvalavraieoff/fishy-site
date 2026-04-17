@@ -1,0 +1,45 @@
+/* =============================================
+   footer.css — Footer styles
+   ============================================= */
+
+footer {
+  border-top: 1px solid rgba(58, 155, 220, 0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-logo img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.footer-logo span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.footer-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(58, 155, 220, 0.2);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
