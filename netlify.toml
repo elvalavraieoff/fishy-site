@@ -1,2 +1,5 @@
+[build]
+  publish = "fishysite_off"
+
 [functions]
-  directory = "netlify/functions"
+  directory = "fishysite_off/netlify/functions"
