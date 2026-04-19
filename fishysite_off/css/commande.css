@@ -203,6 +203,12 @@
   border: 1px solid rgba(126, 200, 240, 0.2);
 }
 
+.badge-information {
+  background: rgba(81, 154, 243, 0.12);
+  color: #a8d4f8;
+  border: 1px solid rgba(81, 154, 243, 0.28);
+}
+
 /* ---- Nav active state ---- */
 .nav-active {
   color: var(--text-primary) !important;
