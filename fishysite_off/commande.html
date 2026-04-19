@@ -51,6 +51,7 @@
     <button class="cmd-tab" data-filter="peche">Pêche</button>
     <button class="cmd-tab" data-filter="social">Social</button>
     <button class="cmd-tab" data-filter="economie">Économie</button>
+    <button class="cmd-tab" data-filter="information">Information</button>
   </div>
 
   <!-- SECTIONS -->
@@ -79,11 +80,6 @@
       <div class="cmd-item">
         <div class="cmd-name"><span class="cmd-slash">/</span>catch</div>
         <div class="cmd-desc">Capture des poissons spéciaux quotidiennement.</div>
-        <span class="cmd-badge badge-peche">Pêche</span>
-      </div>
-      <div class="cmd-item">
-        <div class="cmd-name"><span class="cmd-slash">/</span>collection</div>
-        <div class="cmd-desc">Consulte ta collection de poissons, leur rareté et leur valeur totale.</div>
         <span class="cmd-badge badge-peche">Pêche</span>
       </div>
     </div>
@@ -120,12 +116,17 @@
         <div class="cmd-desc">Propose un échange d'objets à un autre joueur. Les deux parties doivent accepter.</div>
         <span class="cmd-badge badge-social">Social</span>
       </div>
-      <div class="cmd-item">
-        <div class="cmd-name"><span class="cmd-slash">/</span>classement</div>
-        <div class="cmd-desc">Affiche le classement mondial en temps réel. Vois où tu te situes parmi tous les joueurs.</div>
+    </div>
+    <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>code</div>
+        <div class="cmd-desc">Obtien un code redeem pour des récompenses exclusives.</div>
         <span class="cmd-badge badge-social">Social</span>
       </div>
-    </div>
+          <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>collection</div>
+        <div class="cmd-desc">Consulte ta collection de poissons, leur rareté et leur valeur totale.</div>
+        <span class="cmd-badge badge-social">Social</span>
+      </div>
   </div>
 
   <!-- ÉCONOMIE -->
@@ -147,6 +148,39 @@
         <div class="cmd-name"><span class="cmd-slash">/</span>pension</div>
         <div class="cmd-desc">Réclame tes coins quotidiens. Reviens chaque jour pour maximiser tes gains.</div>
         <span class="cmd-badge badge-economie">Économie</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFORMATION -->
+  <div class="cmd-section fade-in fade-in-delay-3" data-category="information">
+    <div class="cmd-section-header">
+      <div class="cmd-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="cmd-section-title">Commandes Information</h2>
+        <p class="cmd-section-subtitle">Obtiens des informations</p>
+      </div>
+    </div>
+    <div class="cmd-list">
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>info fish</div>
+        <div class="cmd-desc">Obtiens des informations sur un poisson spécifique.</div>
+        <span class="cmd-badge badge-information">Information</span>
+      </div>
+      <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>profil</div>
+        <div class="cmd-desc">Obtiens des informations sur un/ton profil.</div>
+        <span class="cmd-badge badge-information">Information</span>
+      </div>
+       <div class="cmd-item">
+        <div class="cmd-name"><span class="cmd-slash">/</span>classement</div>
+        <div class="cmd-desc">Obtiens des informations sur le classement mondial.</div>
+        <span class="cmd-badge badge-information">Information</span>
       </div>
     </div>
   </div>
