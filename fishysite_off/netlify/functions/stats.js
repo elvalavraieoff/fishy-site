@@ -1,5 +1,6 @@
-exports.handler = async () => {
-  const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
+export async function onRequest(context) {
+  const BOT_TOKEN = context.env.DISCORD_BOT_TOKEN;
+  const CLIENT_ID = context.env.DISCORD_CLIENT_ID;
 
   try {
     const res = await fetch('https://discord.com/api/v10/users/@me/guilds?limit=200', {
@@ -10,13 +11,11 @@ exports.handler = async () => {
 
     const guilds = await res.json();
     const serverCount = guilds.length;
-
     const userEstimate = serverCount * 20;
 
-    // Récupération du nombre de commandes slash du bot
+    // Récupération des commandes slash
     let commandCount = 0;
     try {
-      const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
       const cmdRes = await fetch(`https://discord.com/api/v10/applications/${CLIENT_ID}/commands`, {
         headers: { Authorization: `Bot ${BOT_TOKEN}` }
       });
@@ -26,20 +25,25 @@ exports.handler = async () => {
       }
     } catch (_) {}
 
-    return {
-      statusCode: 200,
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({
-        servers: serverCount,
-        users: userEstimate,
-        commands: commandCount
-      })
-    };
+    return new Response(JSON.stringify({
+      servers: serverCount,
+      users: userEstimate,
+      commands: commandCount
+    }), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+
   } catch (err) {
-    return {
-      statusCode: 500,
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ error: err.message })
-    };
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
   }
-};
+}
