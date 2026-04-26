@@ -99,6 +99,19 @@
       </div>
     </div>
 
+    <div class="stat-card fade-in fade-in-delay-2">
+      <div class="stat-live"><div class="stat-live-dot"></div>Live</div>
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <span class="stat-value loading" id="stat-commands">...</span>
+        <span class="stat-label">Commandes</span>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -155,11 +168,13 @@ async function loadStats() {
     if (!res.ok) throw new Error();
     const data = await res.json();
 
-    data.servers != null ? setStatValue('stat-servers', data.servers) : setStatError('stat-servers');
-    data.users   != null ? setStatValue('stat-users',   data.users)   : setStatError('stat-users');
+    data.servers  != null ? setStatValue('stat-servers',  data.servers)  : setStatError('stat-servers');
+    data.users    != null ? setStatValue('stat-users',    data.users)    : setStatError('stat-users');
+    data.commands != null ? setStatValue('stat-commands', data.commands) : setStatError('stat-commands');
   } catch {
     setStatError('stat-servers');
     setStatError('stat-users');
+    setStatError('stat-commands');
   }
 }
 
